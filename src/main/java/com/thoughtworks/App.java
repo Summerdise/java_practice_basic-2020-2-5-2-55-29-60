@@ -39,19 +39,19 @@ public class App {
       double itemPrice = itemPriceArr[itemArr.get(i)];
       int itemNum = itemArr.get(i+1);
       int oneItemTotalPrice = new Double(itemNum * itemPrice).intValue();
-      stringBuilder.append(String.format("%s x %d = %d元%n",itemName,itemNum,oneItemTotalPrice));
+      stringBuilder.append(String.format("%s x %d = %d元\n",itemName,itemNum,oneItemTotalPrice));
     }
     stringBuilder.append("-----------------------------------\n");
     if(isCheaper){
       stringBuilder.append("使用优惠:\n");
       if(chooseWhichPlan){
-        stringBuilder.append(String.format("指定菜品半价(黄焖鸡，凉皮)，省%d元%n",new Double(decreaseHalfPrice).intValue()));
+        stringBuilder.append(String.format("指定菜品半价(黄焖鸡，凉皮)，省%d元\n",new Double(decreaseHalfPrice).intValue()));
       }else{
         stringBuilder.append("满30减6元，省6元\n");
       }
       stringBuilder.append("-----------------------------------\n");
     }
-    stringBuilder.append(String.format("总计：%d元%n",new Double(finalPrice).intValue()));
+    stringBuilder.append(String.format("总计：%d元\n",new Double(finalPrice).intValue()));
     stringBuilder.append("===================================");
     return stringBuilder.toString();
   }
